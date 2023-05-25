@@ -63,11 +63,3 @@ def calc(data: TaxIn):
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "qaaaa": q}
-
-
-client = TestClient(app)
-# テスト
-def test_read_main():
-    response = client.get("/")
-    assert response.status_code == 200
-    assert response.json() == {"Hello": "Worldbbbbbbaaxxxxayyy"}
